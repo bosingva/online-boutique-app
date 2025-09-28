@@ -4,7 +4,6 @@ metadata:
   name: psp-privileged-container
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    # argocd.argoproj.io/sync-wave: "1"
 spec:
   match:
     kinds:
