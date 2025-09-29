@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - external-secrets
 - gatekeeper
-# - istio-ingress
+ - istio
