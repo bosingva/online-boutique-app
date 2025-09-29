@@ -1,0 +1,17 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: frontend-policy
+  namespace: online-boutique
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  action: DENY
+  rules:
+  - from:
+    - source:
+        namespaces: ["online-boutique"]
+    to:
+    - operation:
+        ports: ["80", "8080"]

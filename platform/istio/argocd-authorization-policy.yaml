@@ -1,0 +1,11 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: argo-policy
+  namespace: argocd
+spec:
+  action: DENY
+  rules:
+  - from:
+    - source:
+        namespaces: ["online-boutique"]
