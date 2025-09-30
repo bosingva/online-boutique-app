@@ -4,3 +4,7 @@ resources:
 - gateway.yaml
 - frontend-virtual-service.yaml
 - istio-external-secret.yaml
+- argocd-authorization-policy.yaml
+- frontend-authorization-policy.yaml
+- mesh-peer-authentication.yaml
+
