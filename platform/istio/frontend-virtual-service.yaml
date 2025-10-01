@@ -5,15 +5,15 @@ metadata:
   namespace: online-boutique
 spec:
   hosts:
-  - "*"
+    - "*"
   gateways:
     - istio-ingress/istio-gateway
   http:
-  - route:
-    - destination:
-        host: frontend
-        port:
-          number: 80
-    match:
+    - match:
         - uri:
             prefix: /
+      route:
+        - destination:
+            host: frontend
+            port:
+              number: 80
